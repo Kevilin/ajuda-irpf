@@ -28,8 +28,10 @@
         <input type="number" id="quantidadeCotas" name="quantidadeCotas" required>
         <label for="valorCota">Valor por cota:</label>
         <input type="text" name="valorCota" placeholder="0,00" id="valorCota" required>
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Gerar">
     </form>
+
+    <div id="copiaMensagem"></div>
 
     <div style="display: flex; justify-content: space-around;">
         <?php
@@ -46,13 +48,9 @@
 
         $mensagem = "$empresa - código de negociação $codigoNegociacao, CNPJ $cnpj \n\nEm $dataCompra, comprei $quantidadeCotas cota(s) a R$$valorCotaImpressao cada, totalizando R$$valorTotalImpressao";
 
-        echo "<div class='mensagem'><textarea id='resultado' rows='7'>" . htmlspecialchars($mensagem) . "</textarea></div>";
+        echo "<div class='mensagem'><textarea id='resultado' rows='7'>" . htmlspecialchars($mensagem) . "</textarea></div>"; ?> <br><br>
 
-        //4L74QPQQP208RHAM
-        ?>
-
-        <br><br>
-        <button id="copy-button" style='height: 50px' onclick="copyText()">Copiar</button>
+        <button id="copy-button" style='height: 50px' onclick="copiaMensagem()">Copiar</button>
 
     </div>
 

@@ -18,7 +18,7 @@ $(document).ready(function() {
     });
 });
 
-function copyText() {
+function copiaMensagem() {
     // Seleciona a saída gerada
     var mensagem = document.getElementById("resultado").textContent;
 
@@ -33,5 +33,10 @@ function copyText() {
     document.body.removeChild(tempInput);
 
     // Exibe uma mensagem de sucesso
-    alert("Texto copiado para a área de transferência!");
+    var messageDiv = document.getElementById("copiaMensagem");
+    messageDiv.innerHTML = "Texto copiado para a área de transferência!";
+    messageDiv.classList.add("show");
+    setTimeout(function() {
+        messageDiv.classList.remove("show");
+    }, 2000); // 2 segundos
 }
