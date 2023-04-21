@@ -36,7 +36,7 @@
     <div style="display: flex; justify-content: space-around;">
         <?php
 
-        if (!$_POST['dataCompra']) {
+        if (!isset($_POST['dataCompra'])) {
             return;
         }
 
