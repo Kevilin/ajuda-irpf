@@ -35,6 +35,11 @@
 
     <div style="display: flex; justify-content: space-around;">
         <?php
+
+        if (!$_POST['dataCompra']) {
+            return;
+        }
+
         $dataCompra         = $_POST['dataCompra'] . "/" . (date('Y') - 1);
         $codigoNegociacao   = $_POST['codigoNegociacao'];
         $empresa            = $_POST['empresa'];
